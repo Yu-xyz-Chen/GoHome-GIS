@@ -1,0 +1,571 @@
+/**
+ * demo.css
+ * https://coidea.website
+ *
+ * Licensed under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ * 
+ * Copyright 2018, COIDEA
+ * https://coidea.website
+ */
+
+ @import url("https://fonts.googleapis.com/css?family=Merriweather:900|Montserrat:400,700");
+ html,
+ body {
+   margin: 0;
+   padding: 0;
+   outline: none;
+   font-family: "Montserrat", sans-serif;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   -webkit-touch-callout: none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+ }
+ 
+ body {
+   overflow-x: hidden;
+   opacity: 0;
+   visibility: hidden;
+ }
+ 
+ header {
+   position: fixed;
+   display: block;
+   width: 64px;
+   height: 100%;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   border-left: 1px solid #EFF1F3;
+   z-index: 100;
+   opacity: 0;
+   visibility: hidden;
+ }
+ @media screen and (max-width: 1360px) {
+   header {
+     background-color: rgba(253, 255, 252, 0.65);
+   }
+ }
+ header nav {
+   padding: 0;
+   margin: 0;
+   list-style-type: none;
+ }
+ header nav.navigation li {
+   background-color: #EFF1F3;
+   position: relative;
+   display: block;
+   width: 64px;
+   height: 64px;
+   margin-top: -16px;
+   padding-top: 16px;
+ }
+ header nav.navigation li svg {
+   position: relative;
+   display: block;
+   width: 32px;
+   height: 32px;
+   margin: 16px;
+   cursor: pointer;
+   transition: fill 0.35s ease-in-out;
+ }
+ header nav.navigation li svg circle {
+   fill: #020100;
+   transition: fill 0.35s ease-in-out;
+ }
+ header nav.navigation li svg:hover circle {
+   fill: #9C0D38;
+ }
+ header nav.main {
+   position: absolute;
+   display: block;
+   width: 64px;
+   height: auto;
+   top: 50%;
+   transform: translateY(-50%);
+ }
+ header nav.main li {
+   position: relative;
+   display: inline-block;
+   transform-origin: center center;
+   transform: rotate(90deg);
+ }
+ header nav.main li a {
+   display: block;
+   min-width: 66px;
+   font-size: 15px;
+   line-height: 64px;
+   font-weight: 700;
+   padding: 16px 0;
+   color: #020100;
+   text-decoration: none;
+   outline: 0px none;
+   outline: 0px;
+   transition: color 0.35s ease-in-out;
+ }
+ header nav.main li a:hover {
+   color: #9C0D38;
+ }
+ header nav.logo {
+   position: absolute;
+   display: block;
+   width: 64px;
+   height: auto;
+   bottom: 0;
+ }
+ header nav.logo li {
+   position: relative;
+   display: inline-block;
+ }
+ header nav.logo li a {
+   display: block;
+   min-width: 66px;
+   font-size: 15px;
+   line-height: 32px;
+   text-align: center;
+   font-weight: 700;
+   padding: 16px 0;
+   color: #020100;
+   text-decoration: none;
+   outline: 0px none;
+   outline: 0px;
+   transition: color 0.35s ease-in-out;
+ }
+ header nav.logo li a img {
+   position: relative;
+   display: block;
+   width: 32px;
+   min-width: 32px;
+   max-width: 32px;
+   height: auto;
+   margin: 0 auto;
+ }
+ header nav.logo li a:hover {
+   color: #9C0D38;
+ }
+ 
+ section.coidea-slider {
+   position: relative;
+   display: block;
+   width: 100%;
+   min-width: 100%;
+   min-width: 100vw;
+   height: 100%;
+   min-height: 100%;
+   min-height: 100vh;
+ }
+ section.coidea-slider .slider-helpers {
+   position: absolute;
+   display: block;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+ }
+ section.coidea-slider .slider-helpers .arrea {
+   position: absolute;
+   display: block;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   bottom: 0;
+   left: 0;
+ }
+ section.coidea-slider .slider-helpers .arrea.black-arrea {
+   background-color: #020100;
+   width: 0;
+   max-width: 480px;
+ }
+ @media screen and (max-width: 1360px) {
+   section.coidea-slider .slider-helpers .arrea.black-arrea {
+     max-width: 320px;
+   }
+ }
+ @media screen and (max-width: 1024px) {
+   section.coidea-slider .slider-helpers .arrea.black-arrea {
+     max-width: 140px;
+   }
+ }
+ section.coidea-slider .slider-helpers .arrea.white-arrea {
+   background-color: #FDFFFC;
+   width: 0;
+   max-width: calc(100% - 480px);
+   left: 480px;
+ }
+ @media screen and (max-width: 1360px) {
+   section.coidea-slider .slider-helpers .arrea.white-arrea {
+     max-width: calc(100% - 320px);
+     left: 320px;
+   }
+ }
+ @media screen and (max-width: 1024px) {
+   section.coidea-slider .slider-helpers .arrea.white-arrea {
+     max-width: calc(100% - 140px);
+     left: 140px;
+   }
+ }
+ section.coidea-slider .slider-holder {
+   position: relative;
+   width: 100%;
+   max-width: 580px;
+   height: 100%;
+   min-height: 100%;
+   min-height: 100vh;
+   overflow: hidden;
+   padding-left: 280px;
+   float: left;
+ }
+ @media screen and (max-width: 1360px) {
+   section.coidea-slider .slider-holder {
+     padding-left: 120px;
+   }
+ }
+ @media screen and (max-width: 1024px) {
+   section.coidea-slider .slider-holder {
+     padding-left: 32px;
+   }
+ }
+ section.coidea-slider .slider-holder .slider {
+   background-color: transparent;
+   position: absolute;
+   display: block;
+   width: 0;
+   max-width: 580px;
+   height: 580px;
+   overflow: hidden;
+   top: 50%;
+   transform: translateY(-50%);
+   overflow: hidden;
+ }
+ @media screen and (max-width: 1024px) {
+   section.coidea-slider .slider-holder .slider {
+     width: 100%;
+     height: 480px;
+   }
+ }
+ @media screen and (max-width: 768px) {
+   section.coidea-slider .slider-holder .slider {
+     width: 90%;
+     width: calc(100% - 128px);
+   }
+ }
+ @media screen and (max-width: 768px) {
+   section.coidea-slider .slider-holder .slider {
+     height: 380px;
+   }
+ }
+ @media screen and (max-width: 640px) {
+   section.coidea-slider .slider-holder .slider {
+     height: 75vh;
+   }
+ }
+ section.coidea-slider .slider-holder .slider .slider-item {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: transparent;
+   background-repeat: no-repeat;
+   background-position: center center;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+   cursor: pointer;
+   transition: filter 0.35s ease-in-out;
+ }
+ section.coidea-slider .slider-holder .slider .slider-item:hover {
+   -webkit-filter: grayscale(100%);
+   filter: grayscale(100%);
+ }
+ section.coidea-slider .slider-nav {
+   position: relative;
+   display: inline-block;
+   width: 32px;
+   height: auto;
+   margin: 0;
+   margin-top: 50%;
+   margin-top: 50vh;
+   transform: translateY(-50%);
+   margin-left: -248px;
+   color: #FDFFFC;
+   opacity: 0;
+   visibility: hidden;
+ }
+ @media screen and (max-width: 1360px) {
+   section.coidea-slider .slider-nav {
+     margin-left: -88px;
+   }
+ }
+ @media screen and (max-width: 1024px) {
+   section.coidea-slider .slider-nav {
+     margin-left: 32px;
+   }
+ }
+ @media screen and (max-width: 768px) {
+   section.coidea-slider .slider-nav {
+     margin-left: 16px;
+   }
+ }
+ section.coidea-slider .slider-nav span {
+   font-family: "Merriweather", serif;
+   font-weight: 900;
+ }
+ section.coidea-slider .slider-nav span.slider-nav-btn {
+   position: relative;
+   display: inline-block;
+   width: 32px;
+   height: 32px;
+   padding-bottom: 16px;
+   cursor: pointer;
+ }
+ section.coidea-slider .slider-nav span.slider-nav-btn img {
+   position: relative;
+   display: block;
+   width: 100%;
+   max-width: 100%;
+   min-width: 100%;
+   height: auto;
+ }
+ section.coidea-slider .slider-nav span.slider-nav-length {
+   width: 32px;
+   height: 32px;
+   transform-origin: center center;
+   transform: rotate(-90deg);
+   display: inline-block;
+   text-align: center;
+   padding: 0 5px;
+ }
+ section.coidea-slider .slider-nav span.slider-nav-progress {
+   background-color: #4A525A;
+   position: relative;
+   display: inline-block;
+   width: 2px;
+   height: 120px;
+   margin: 6px 14px;
+ }
+ section.coidea-slider .slider-nav span.slider-nav-progress span.progress {
+   background-color: #FDFFFC;
+   position: absolute;
+   display: block;
+   width: 100%;
+   height: 0%;
+   right: 0;
+   bottom: 0;
+   left: 0;
+ }
+ section.coidea-slider .slider-nav span.slider-nav-index {
+   width: 32px;
+   height: 32px;
+   transform-origin: center center;
+   transform: rotate(-90deg);
+   display: inline-block;
+   text-align: center;
+   padding: 0 5px;
+ }
+ section.coidea-slider .slider-content {
+   position: relative;
+   width: 100%;
+   max-width: calc(100% - 992px);
+   height: 100%;
+   min-height: 100%;
+   min-height: 100vh;
+   overflow: hidden;
+   padding-left: 32px;
+   float: left;
+   margin-left: -20px;
+   opacity: 0;
+   visibility: hidden;
+ }
+ @media screen and (max-width: 1360px) {
+   section.coidea-slider .slider-content {
+     max-width: calc(100% - 768px);
+   }
+ }
+ @media screen and (max-width: 992px) {
+   section.coidea-slider .slider-content {
+     margin-top: 0px;
+     max-width: calc(100% - 128px);
+     padding-left: 32px;
+   }
+ }
+ section.coidea-slider .slider-content .slider-content-inner {
+   position: absolute;
+   display: block;
+   width: 90%;
+   width: calc(100% - 48px);
+   height: 320px;
+   top: 50%;
+   margin-top: -160px;
+ }
+ @media screen and (max-width: 992px) {
+   section.coidea-slider .slider-content .slider-content-inner {
+     position: relative;
+     width: 100%;
+     height: auto;
+     top: inherit;
+     margin-top: 32px;
+   }
+ }
+ section.coidea-slider .slider-content .slider-content-inner span.subheadline {
+   background-color: #4A525A;
+   position: relative;
+   display: inline-block;
+   padding: 8px 16px;
+   color: #FDFFFC;
+   text-transform: uppercase;
+   font-size: 13px;
+   margin-bottom: 16px;
+ }
+ section.coidea-slider .slider-content .slider-content-inner h1 {
+   display: block;
+   color: #020100;
+   font-family: "Merriweather", serif;
+   font-size: 64px;
+   line-height: 72px;
+   font-weight: 900;
+   margin: 0;
+   padding: 0;
+ }
+ @media screen and (max-width: 1124px) {
+   section.coidea-slider .slider-content .slider-content-inner h1 {
+     font-size: 48px;
+     line-height: 56px;
+   }
+ }
+ section.coidea-slider .slider-content .slider-content-inner p {
+   font-family: "Montserrat", sans-serif;
+   color: #020100;
+   max-width: 280px;
+   margin: 32px 0 36px;
+ }
+ section.coidea-slider .slider-content .slider-content-inner a {
+   font-family: "Montserrat", sans-serif;
+   color: #020100;
+   text-decoration: none;
+   text-transform: uppercase;
+   font-weight: 700;
+   outline: 0px none;
+   outline: 0px;
+   transition: color 0.35s ease-in-out;
+ }
+ section.coidea-slider .slider-content .slider-content-inner a:hover {
+   color: #9C0D38;
+ }
+ 
+ .coidea-modal {
+   position: fixed;
+   display: block;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   bottom: 0;
+   left: -100%;
+   z-index: 99;
+   overflow: hidden;
+ }
+ .coidea-modal .arrea {
+   position: absolute;
+   display: block;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   z-index: 3;
+ }
+ .coidea-modal .arrea.black-arrea {
+   background-color: #020100;
+   width: 100%;
+ }
+ .coidea-modal .video-holder {
+   position: absolute;
+   display: block;
+   width: 0;
+   height: 100%;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   z-index: 2;
+ }
+ .coidea-modal .video-holder video {
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   min-width: 100%;
+   min-height: 100%;
+   width: auto;
+   height: auto;
+   z-index: -100;
+   transform: translateX(-50%) translateY(-50%);
+   background-repeat: no-repeat;
+   background-position: center center;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+   margin-left: -150%;
+   opacity: 0;
+   visibility: hidden;
+ }
+ .coidea-modal .coidea-modal-inner {
+   position: relative;
+   display: block;
+   width: 100%;
+   width: calc(100% - 32px);
+   max-width: 768px;
+   height: auto;
+   margin: 0 auto;
+   top: 50%;
+   transform: translateY(-50%) !important;
+   opacity: 0;
+   visibility: hidden;
+   z-index: 3;
+   text-align: center;
+   overflow: hidden;
+ }
+ @media screen and (max-width: 992px) {
+   .coidea-modal .coidea-modal-inner {
+     text-align: left;
+   }
+ }
+ .coidea-modal .coidea-modal-inner h2 {
+   display: block;
+   color: #FDFFFC;
+   font-family: "Merriweather", serif;
+   font-size: 64px;
+   line-height: 72px;
+   font-weight: 900;
+   margin: 0;
+   padding: 0;
+ }
+ @media screen and (max-width: 1124px) {
+   .coidea-modal .coidea-modal-inner h2 {
+     font-size: 48px;
+     line-height: 56px;
+   }
+ }
+ @media screen and (max-width: 992px) {
+   .coidea-modal .coidea-modal-inner h2 {
+     padding: 0 72px 0 0;
+   }
+ }
+ .coidea-modal .coidea-modal-inner .modal-content {
+   font-family: "Montserrat", sans-serif;
+   color: #FDFFFC;
+   max-width: 100%;
+   margin: 32px 0 36px;
+ }
+ @media screen and (max-width: 992px) {
+   .coidea-modal .coidea-modal-inner .modal-content {
+     padding: 0 72px 0 0;
+   }
+ }
